@@ -12,7 +12,7 @@ struct FormBuilderApp: App {
     var body: some Scene {
         WindowGroup {
             AppFormView(
-                viewModel: AppFormViewModel(sections: buildFromAPI()),
+                viewModel: AppFormViewModel(sections: []),
                 config: DynamicFormConfig {
                     LinearGradient(
                         colors: [.blue, .purple],
@@ -24,61 +24,4 @@ struct FormBuilderApp: App {
             )
         }
     }
-    
-    func buildFromAPI() -> [AppTextSection] {
-         let sampleItems: [DemoItem] = [
-             .init(id: UUID(), name: "Option A"),
-             .init(id: UUID(), name: "Option B"),
-             .init(id: UUID(), name: "Option C")
-         ]
-
-         return [
-            AppTextSection(
-                value: "Personal Info",
-                 fields: [
-                    AppTextFieldModel(placeholder: "First Name"),
-                    AppTextFieldModel(placeholder: "Last Name"),
-                    AppTextFieldModel(placeholder: "Email")
-                 ]
-             ),
-            AppTextSection(
-                value: "Preferences",
-                 fields: [
-                    AppSingleSelectionModel(items: sampleItems)
-                 ]
-             ),
-            
-               AppTextSection(
-                   value: "Personal Info",
-                    fields: [
-                       AppTextFieldModel(placeholder: "First Name"),
-                       AppTextFieldModel(placeholder: "Last Name"),
-                       AppTextFieldModel(placeholder: "Email")
-                    ]
-                ),
-               AppTextSection(
-                   value: "Preferences",
-                    fields: [
-                       AppSingleSelectionModel(items: sampleItems)
-                    ]
-                )
-,
-            
-               AppTextSection(
-                   value: "Personal Info",
-                    fields: [
-                       AppTextFieldModel(placeholder: "First Name"),
-                       AppTextFieldModel(placeholder: "Last Name"),
-                       AppTextFieldModel(placeholder: "Email")
-                    ]
-                ),
-               AppTextSection(
-                   value: "Preferences",
-                    fields: [
-                       AppSingleSelectionModel(items: sampleItems)
-                    ]
-                )
-
-         ]
-     }
 }

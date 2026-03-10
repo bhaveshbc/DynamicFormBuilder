@@ -1,0 +1,39 @@
+{
+  "sections": [
+    {
+      "title": "Personal Info",
+      "fields": [
+        {
+          "type": "text",
+          "placeholder": "First Name"
+        },
+        {
+          "type": "text",
+          "placeholder": "Last Name"
+        },
+        {
+          "type": "text",
+          "placeholder": "Email"
+        }
+      ]
+    },
+    {
+      "title": "Preferences",
+      "fields": [
+        {
+          "type": "singleSelection",
+          "items": [
+            { "id": "1", "title": "Option 1" },
+            { "id": "2", "title": "Option 2" },
+            { "id": "3", "title": "Option 3" }
+          ]
+        },
+        {
+          "type": "text",
+          "placeholder": "Language"
+        }
+      ]
+    }
+  ]
+}
+
