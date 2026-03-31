@@ -20,16 +20,6 @@ Below is the class diagram for the core architecture. If the image path differs 
 - **Selection utility**
   - `SingleSelectionType` and `SingleSelectionList`: A generic, reusable single-select list component used by field models like `AppSingleSelectionModel`.
 
-## Key Types
-
-- `FormFieldModelType` (protocol)
-- `FormSectionModelType` (protocol)
-- `AppTextSection` (concrete section)
-- `AppFormViewModel` (view model; maintains `sections` and exposes `printFormData()`)
-- `AppFormView` (SwiftUI view rendering the dynamic form)
-- `AppTextFieldModel` (field model; text input)
-- `AppSingleSelectionModel` (field model; single selection)
-- `SingleSelectionType` / `SingleSelectionList` (selection utilities)
 
 ## Getting Started
 
@@ -37,12 +27,3 @@ Below is the class diagram for the core architecture. If the image path differs 
 2. Build and run the `FormBuilderApp` target.
 3. The app launches into `AppFormView`, rendering sections and fields defined by `AppFormViewModel`.
 
-## Configuration
-
-`DynamicFormConfig` controls per-row insets and background color:
-
-```swift
-struct DynamicFormConfig {
-    var rowInset: EdgeInsets
-    var backgroundColor: Color
-}
