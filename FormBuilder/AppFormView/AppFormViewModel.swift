@@ -16,7 +16,9 @@ class AppFormViewModel {
         let formAFactory = FieldFactory(
             builders: [
                 AppTextFieldBuilder.self,
-                AppSingleSelectionBuilder.self
+                AppSingleSelectionBuilder.self,
+                AppMultiSelectionBuilder.self,
+                AppTextAreaFieldBuilder.self
             ]
         )
         self.sections = buildFromAPI(factory: formAFactory)

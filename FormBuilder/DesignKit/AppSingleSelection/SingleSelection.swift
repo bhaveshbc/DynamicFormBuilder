@@ -20,11 +20,9 @@ public struct SingleSelectionList<Item: SingleSelectionType>: View {
     public init(items: [Item], selectedID: Binding<Item.ID?>) {
         self.items = items
         self._selectedID = selectedID
-     
     }
 
     public var body: some View {
-        
         CardShadow{
             VStack {
                 ForEach(items) { item in
@@ -38,14 +36,12 @@ public struct SingleSelectionList<Item: SingleSelectionType>: View {
 
                             Spacer()
                         }
-                        
                     }
                     .buttonStyle(.plain)
                 }    .background(Color.clear)
 
             }.padding(15)
         }
-
   }
 
     private func isSelected(_ item: Item) -> Bool {

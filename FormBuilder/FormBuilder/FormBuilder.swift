@@ -23,6 +23,17 @@ class AppTextFieldBuilder: FormFieldBuilder {
     }
 }
 
+class AppTextAreaFieldBuilder: FormFieldBuilder {
+
+    static let type = "textArea"
+
+    static func build(from dto: FieldDTO) -> any FormFieldModelType {
+        AppTextAreaModel(
+            placeholder: dto.placeholder ?? ""
+        )
+    }
+}
+
 class AppSingleSelectionBuilder: FormFieldBuilder {
 
     static let type = "singleSelection"
@@ -37,6 +48,24 @@ class AppSingleSelectionBuilder: FormFieldBuilder {
         } ?? []
 
         return AppSingleSelectionModel(items: items)
+    }
+}
+
+
+class AppMultiSelectionBuilder: FormFieldBuilder {
+
+    static let type = "multiSelection"
+
+    static func build(from dto: FieldDTO) -> any FormFieldModelType {
+
+        let items = dto.items?.map {
+            DemoItem(
+                id: UUID(uuidString: $0.id) ?? UUID(),
+                name: $0.title
+            )
+        } ?? []
+
+        return AppMultiSelectionModel(items: items)
     }
 }
 

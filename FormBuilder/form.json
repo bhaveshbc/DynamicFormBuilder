@@ -17,23 +17,50 @@
         }
       ]
     },
+    
     {
-      "title": "Preferences",
+      "title": "Gender",
       "fields": [
         {
           "type": "singleSelection",
           "items": [
-            { "id": "1", "title": "Option 1" },
-            { "id": "2", "title": "Option 2" },
-            { "id": "3", "title": "Option 3" }
+            {
+              "id": "1",
+              "title": "Male"
+            },
+            {
+              "id": "2",
+              "title": "Female"
+            },
+            {
+              "id": "3",
+              "title": "Other"
+            }
           ]
         },
         {
           "type": "text",
           "placeholder": "Language"
         }
+          ]
+        },
+    
+    {
+          "title": "Hobby",
+          "fields": [
+            {
+              "type": "multiSelection",
+              "items": [
+                { "id": "1", "title": "Cricket" },
+                { "id": "2", "title": "FootBoll" },
+                { "id": "3", "title": "VolyBall" },
+                { "id": "4", "title": "Doctor Doctor" }
+              ]
+            }, {
+                "type": "textArea",
+                "placeholder": "Address"
+            }
       ]
     }
-  ]
-}
-
+      ]
+    }
